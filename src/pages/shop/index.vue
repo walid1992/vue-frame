@@ -1,6 +1,8 @@
 <template>
 <div>
-  <h1>Shopping Cart Example</h1>
+  <router-link :to="{name: 'salerank'}">
+    <h1>购物车demo</h1>
+  </router-link>
   <hr>
   <h2>Products</h2>
   <product-list></product-list>

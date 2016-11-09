@@ -4,14 +4,16 @@
  */
 
 module.exports = [{
+  title: '售卖榜',
   path: '/salerank',
-  name: '排行榜界面',
+  name: 'salerank',
   component: (resolve) => {
     require(['pages/salerank'], resolve)
   }
 }, {
+  title: '购物车',
   path: '/shop',
-  name: '购物',
+  name: 'shop',
   component: (resolve) => {
     require(['pages/shop'], resolve)
   }
