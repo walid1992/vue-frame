@@ -1,6 +1,6 @@
 <template>
 <div>
-  <router-link :to="{name: 'salerank'}">
+  <router-link :to="{name: pageName.SALERANK}">
     <h1>购物车demo</h1>
   </router-link>
   <hr>
@@ -14,8 +14,14 @@
 <script>
 import ProductList from './components/ProductList.vue'
 import Cart from './components/Cart.vue'
+import pageName from 'router/name'
 
 export default {
+  data () {
+    return {
+      pageName: pageName
+    }
+  },
   components: {
     ProductList,
     Cart

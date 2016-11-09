@@ -3,18 +3,22 @@
  * @description 路由配置页
  */
 
-module.exports = [{
+import name from './name'
+
+const map = [{
   title: '售卖榜',
   path: '/salerank',
-  name: 'salerank',
+  name: name.SALERANK,
   component: (resolve) => {
     require(['pages/salerank'], resolve)
   }
 }, {
   title: '购物车',
   path: '/shop',
-  name: 'shop',
+  name: name.SHOP,
   component: (resolve) => {
     require(['pages/shop'], resolve)
   }
 }]
+
+module.exports = map
