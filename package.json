@@ -1,7 +1,7 @@
 {
-  "name": "didabao",
+  "name": "vue-frame",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "A Vue.js frame project",
   "author": "walid1992 <541280314@qq.com>",
   "private": true,
   "scripts": {
@@ -71,6 +71,7 @@
     "sinon-chai": "^2.8.0",
     "url-loader": "^0.5.7",
     "vue-loader": "^9.4.0",
+    "vuex": "^2.0.0",
     "vue-resource": "^1.0.3",
     "vue-style-loader": "^1.0.0",
     "webpack": "^1.13.2",

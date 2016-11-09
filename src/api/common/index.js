@@ -1,6 +1,7 @@
 /**
- * Created by walid on 16/11/01.
- * common api utils
+ * @author walid
+ * @description commonApi 模块
+ * @date 2016/11/09
  */
 
 import Api from '../api.js'
