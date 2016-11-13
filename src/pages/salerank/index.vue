@@ -16,15 +16,18 @@ export default {
   },
   methods: {
     refresh () {
-      CommonApi.salerank().then(res => {
-        this.lists = res
-      }, res => {
-        this.$message({
-          message: res.msg,
-          type: 'error'
-        })
-      })
+      CommonApi.salerank()
+         .then(res => {
+           this.lists = res
+         })
+         .catch(error => {
+           this.$message({
+             message: error.msg,
+             type: 'error'
+           })
+         })
     }
   }
 }
+
 </script>

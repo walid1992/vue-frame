@@ -29,7 +29,8 @@ module.exports = {
       'components': path.resolve(__dirname, '../src/components'),
       'api': path.resolve(__dirname, '../src/api'),
       'pages': path.resolve(__dirname, '../src/pages'),
-      'router': path.resolve(__dirname, '../src/router')
+      'router': path.resolve(__dirname, '../src/router'),
+      'store': path.resolve(__dirname, '../src/store')
     }
   },
   resolveLoader: {

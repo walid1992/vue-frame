@@ -1,10 +1,14 @@
 /**
  * @author walid
  * @description vue router
+ * @date 2016/11/10
  */
 
+import Vue from 'vue'
 import VueRouter from 'vue-router'
 import map from './map'
+
+Vue.use(VueRouter)
 
 export default new VueRouter({
   mode: 'history',
