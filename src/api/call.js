@@ -16,13 +16,13 @@ var reject
  */
 function Call (executor) {
   try {
-    executor(function (response) {
-      dispatchResolve(response)
-    }, function (response) {
-      dispatchReject(response)
+    executor(function (res) {
+      dispatchResolve(res)
+    }, function (errRes) {
+      dispatchReject(errRes)
     })
-  } catch (error) {
-    dispatchReject(error)
+  } catch (err) {
+    dispatchReject(err)
   }
 }
 
