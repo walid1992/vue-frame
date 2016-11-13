@@ -16,15 +16,13 @@ var reject
  */
 function Call (executor) {
   try {
-    executor(function (x) {
-      resolve(x)
-    }, function (r) {
-      if (reject) {
-        reject(r)
-      }
+    executor(function (response) {
+      dispatchResolve(response)
+    }, function (response) {
+      dispatchReject(response)
     })
-  } catch (e) {
-    reject(e)
+  } catch (error) {
+    dispatchReject(error)
   }
 }
 
@@ -36,6 +34,22 @@ Call.prototype.then = function (onResolved) {
 Call.prototype.catch = function (onRejected) {
   reject = onRejected
   return this
+}
+
+function dispatchResolve (response) {
+  if (isFunc(resolve)) {
+    resolve(response)
+  }
+}
+
+function dispatchReject (error) {
+  if (isFunc(reject)) {
+    reject(error)
+  }
+}
+
+function isFunc (obj) {
+  return obj && typeof obj === 'function'
 }
 
 module.exports = Call

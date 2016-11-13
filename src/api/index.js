@@ -14,6 +14,17 @@ function use () {
   // Axios.defaults.baseURL = 'http://103.37.145.195:8830'
   // 设置超时时间
   Axios.defaults.timeout = 2000
+  Axios.defaults.validateStatus = function (status) {
+    return status
+  }
+
+  // 添加请求conig配置
+  // Axios.interceptors.request.use(config => {
+  //   return config
+  // }, error => {
+  //   return Promise.reject(error)
+  // })
+
   // 设置统一请求拦截
   Axios.interceptors.response.use(response => {
     if (response.data.code === 0) {
@@ -30,14 +41,8 @@ function use () {
 
 function get (url, body) {
   return new Call((resolve, reject) => {
-    Axios.get(url, {
-      params: body,
-      validateStatus: function (status) {
-        return status
-      }
-    })
+    Axios.get(url, {params: body})
       .then(response => {
-        // 成功数据回调
         resolve(response.data)
       })
       .catch(error => {
@@ -47,10 +52,9 @@ function get (url, body) {
 }
 
 function post (url, body) {
-  return new Promise((resolve, reject) => {
-    Axios.post(url, body)
+  return new Call((resolve, reject) => {
+    Axios.post(url, {params: body})
       .then(response => {
-        // 成功数据回调
         resolve(response.data)
       })
       .catch(error => {
@@ -60,7 +64,7 @@ function post (url, body) {
 }
 
 module.exports = {
+  use: use,
   get: get,
-  post: post,
-  use: use
+  post: post
 }
