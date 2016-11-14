@@ -8,16 +8,12 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 
 import App from './App'
-import ApiUtils from 'api/utils'
+import Axios from 'api/axios'
 import store from 'store'
 import router from 'router'
 
 Vue.use(ElementUI)
-ApiUtils.use()
-
-process.on('unhandledRejection', function (reason, p) {
-  console.log('Possibly Unhandled Rejection at: Promise ', p, ' reason: ', reason)
-})
+Axios.use()
 
 /* eslint-disable no-new */
 new Vue({

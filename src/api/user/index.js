@@ -4,7 +4,7 @@
  * @date 2016/11/09
  */
 
-import Api from '../utils'
+import Api from '../axios'
 
 const apiURL = {
   // TODO 卖家注册
