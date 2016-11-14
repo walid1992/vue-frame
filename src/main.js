@@ -8,12 +8,12 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 
 import App from './App'
-import Api from 'api'
+import ApiUtils from 'api/utils'
 import store from 'store'
 import router from 'router'
 
 Vue.use(ElementUI)
-Api.use()
+ApiUtils.use()
 
 process.on('unhandledRejection', function (reason, p) {
   console.log('Possibly Unhandled Rejection at: Promise ', p, ' reason: ', reason)

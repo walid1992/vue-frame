@@ -3,7 +3,7 @@
 <template src="./template.html"></template>
 
 <script>
-import CommonApi from 'api/common'
+import {CommonApi} from 'api'
 
 export default {
   data () {

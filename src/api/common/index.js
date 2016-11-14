@@ -4,7 +4,7 @@
  * @date 2016/11/09
  */
 
-import Api from 'api'
+import Api from '../utils'
 
 const apiURL = {
   // 排行榜接口
