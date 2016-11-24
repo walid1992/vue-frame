@@ -6,14 +6,9 @@
 
 'use strict'
 
-var resolve
-var reject
+let resolve
+let reject
 
-/**
- * API Call 构造器
- * @param executor
- * @constructor
- */
 function Call (executor) {
   try {
     executor(function (res) {
