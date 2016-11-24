@@ -1,55 +1,48 @@
 /**
  * @author walid
- * @date 2016/11/13
+ * @date 2016/11/24
  * @description Api Call
  */
 
-'use strict'
-
-let resolve
-let reject
-
-/**
- * API Call 构造器
- * @param executor
- * @constructor
- */
-function Call (executor) {
-  try {
-    executor(function (res) {
-      dispatchResolve(res)
-    }, function (errRes) {
-      dispatchReject(errRes)
-    })
-  } catch (err) {
-    dispatchReject(err)
+class Call {
+  constructor (executor) {
+    let self = this
+    try {
+      executor(function (res) {
+        self._dispatchResolve(res)
+      }, function (errRes) {
+        self._dispatchReject(errRes)
+      })
+    } catch (err) {
+      self._dispatchReject(err)
+    }
   }
-}
 
-Call.prototype.then = function (onResolved) {
-  resolve = onResolved
-  return this
-}
-
-Call.prototype.catch = function (onRejected) {
-  reject = onRejected
-  return this
-}
-
-function dispatchResolve (response) {
-  if (isFunc(resolve)) {
-    resolve(response)
+  then (onResolved) {
+    this.resolve = onResolved
+    return this
   }
-}
 
-function dispatchReject (error) {
-  if (isFunc(reject)) {
-    reject(error)
+  catch (onRejected) {
+    this.reject = onRejected
+    return this
   }
-}
 
-function isFunc (obj) {
-  return obj && typeof obj === 'function'
+  _dispatchResolve (response) {
+    if (Call._isFunc(this.resolve)) {
+      this.resolve(response)
+    }
+  }
+
+  _dispatchReject (error) {
+    if (Call._isFunc(this.reject)) {
+      this.reject(error)
+    }
+  }
+
+  static _isFunc (obj) {
+    return obj && typeof obj === 'function'
+  }
 }
 
 module.exports = Call

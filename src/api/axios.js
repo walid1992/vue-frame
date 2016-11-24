@@ -9,6 +9,8 @@ import QS from 'querystring'
 import Call from 'api/call'
 
 function use () {
+  // Vue.use(Axios)
+
   // TODO baseURL
   // Axios.defaults.baseURL = 'http://103.37.145.195:8830'
 
