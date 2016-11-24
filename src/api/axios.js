@@ -4,14 +4,11 @@
  * @description 网络请求框架封装
  */
 
-import Vue from 'vue'
 import Axios from 'axios'
 import QS from 'querystring'
 import Call from 'api/call'
 
 function use () {
-  Vue.use(Axios)
-
   // TODO baseURL
   // Axios.defaults.baseURL = 'http://103.37.145.195:8830'
 
@@ -43,13 +40,10 @@ function use () {
   // TODO 设置统一请求拦截
   Axios.interceptors.response.use(response => {
     if (response.data.code === 0) {
-      console.log('请求成功 : \n', response)
       return response.data
     }
-    console.error('请求失败 : \n', response)
     return Promise.reject(response.data)
   }, error => {
-    console.error('请求失败 : \n', error)
     return Promise.reject(error)
   })
 }
