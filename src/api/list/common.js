@@ -11,7 +11,7 @@ const apiURL = {
   salerank: 'v1/common/salerank'
 }
 
-module.exports = {
+export default {
   salerank: function () {
     return Api.get(apiURL.salerank, {})
   }

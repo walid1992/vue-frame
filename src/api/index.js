@@ -4,12 +4,12 @@
  * @description HTTP Utils
  */
 
-import CommonApi from './common'
-import UserApi from './user'
-import ShopApi from './shop'
+import common from './list/common'
+import user from './list/user'
+import shop from './list/shop'
 
-module.exports = {
-  CommonApi,
-  UserApi,
-  ShopApi
+export default {
+  common,
+  user,
+  shop
 }

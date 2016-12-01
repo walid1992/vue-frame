@@ -4,7 +4,7 @@
  * @description Api Call
  */
 
-class Call {
+export default class Call {
   constructor (executor) {
     let self = this
     try {
@@ -18,31 +18,29 @@ class Call {
     }
   }
 
-  then (onResolved) {
+  then(onResolved) {
     this.resolve = onResolved
     return this
   }
 
-  catch (onRejected) {
+  catch(onRejected) {
     this.reject = onRejected
     return this
   }
 
-  _dispatchResolve (response) {
+  _dispatchResolve(response) {
     if (Call._isFunc(this.resolve)) {
       this.resolve(response)
     }
   }
 
-  _dispatchReject (error) {
+  _dispatchReject(error) {
     if (Call._isFunc(this.reject)) {
       this.reject(error)
     }
   }
 
-  static _isFunc (obj) {
+  static _isFunc(obj) {
     return obj && typeof obj === 'function'
   }
 }
-
-module.exports = Call

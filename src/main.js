@@ -1,6 +1,7 @@
 /**
- * Created by walid on 16/11/8.
- * 启动配置
+ * @author walid
+ * @date 2016/11/09
+ * @description 程序入口启动配置
  */
 
 import Vue from 'vue'
@@ -9,12 +10,12 @@ import 'element-ui/lib/theme-default/index.css'
 import VueProgressBar from 'vue-progressbar'
 
 import App from './App'
-import Axios from 'api/axios'
+import globalConfig from 'utils/global-config'
 import store from 'store'
 import router from 'router'
 
 Vue.use(ElementUI)
-Axios.use()
+Vue.use(globalConfig)
 
 Vue.use(VueProgressBar, {
   thickness: '5px',
@@ -24,7 +25,6 @@ Vue.use(VueProgressBar, {
   inverse: false
 })
 
-/* eslint-disable no-new */
 new Vue({
   el: '#app',
   router: router,
