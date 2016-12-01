@@ -12,8 +12,8 @@
 </template>
 
 <script>
-  import ProductList from './components/ProductList.vue'
-  import Cart from './components/Cart.vue'
+  import productList from './components/product-list.vue'
+  import cart from './components/cart.vue'
   import pageName from 'router/name'
 
   export default {
@@ -21,8 +21,8 @@
       return {}
     },
     components: {
-      ProductList,
-      Cart
+      productList,
+      cart
     }
   }
 </script>
