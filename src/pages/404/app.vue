@@ -5,7 +5,7 @@
   </div>
 </template>
 
-<style lang="less" scoped>
+<style>
   h1 {
     text-align: center;
     margin-top: 250px;
@@ -15,7 +15,7 @@
   }
 
   p {
-    font-size: 14px;
+    font-size: 30px;
     margin-top: 0;
     color: #999;
     text-align: center;

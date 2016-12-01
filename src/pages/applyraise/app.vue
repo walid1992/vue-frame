@@ -23,11 +23,11 @@
     },
     methods: {
       $onApply: function () {
-        if (!this.canApply) {
-          this.$alert('请输入正确手机号')
-          return
-        }
-        window.location.href = `https://www.shuidihuzhu.com/charitys/applysuccess?channel=${this.channel}&phoneNumber=${this.phoneNumber}`
+//        if (!this.canApply) {
+//          this.$alert('请输入正确手机号')
+//          return
+//        }
+        this.$router.push(this.$routerName.applysuccess)
       }
     }
   }

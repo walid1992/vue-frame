@@ -5,6 +5,8 @@
  */
 
 export default {
-  SALERANK: 'salerank',
-  SHOP: 'shop'
+  salerank: 'salerank',
+  shop: 'shop',
+  applyraise: 'applyraise',
+  applysuccess: 'applysuccess'
 }

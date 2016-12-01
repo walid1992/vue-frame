@@ -37,4 +37,12 @@ export default [
     component: (resolve) => {
       require(['pages/shop'], resolve)
     }
-  }]
+  },
+  {
+    title: '404',
+    path: '*',
+    component: (resolve) => {
+      require(['pages/404/app'], resolve)
+    }
+  }
+]
