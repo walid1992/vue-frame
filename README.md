@@ -1,3 +1,6 @@
+[![GitHub release](https://img.shields.io/github/release/osmartian/vue-frame.svg)](https://github.com/osmartian/vue-frame/releases)  [![GitHub issues](https://img.shields.io/github/issues/osmartian/vue-frame.svg)](https://github.com/osmartian/vue-frame/issues)
+![Node Version](https://img.shields.io/node/v/martian-cli.svg "Node Version")
+
 # vue-frame
 
 > A Vue.js2.0 frame project include axios、vue-router、vuex...
