@@ -1,40 +1,30 @@
-[![GitHub release](https://img.shields.io/github/release/osmartian/vue-frame.svg)](https://github.com/osmartian/vue-frame/releases)  [![GitHub issues](https://img.shields.io/github/issues/osmartian/vue-frame.svg)](https://github.com/osmartian/vue-frame/issues)
-![Node Version](https://img.shields.io/node/v/martian-cli.svg "Node Version")
+# vue-frame1
 
-# vue-frame
+> A Vue.js project
 
-> A Vue.js2.0 frame project include axios、vue-router、vuex...
+## Build Setup
 
-# 项目结构
-
-```
-weex-frame
-│
-├── build (webpack 打包配置)
-│       
-├── config (环境配置)
-│
-├── test (测试模块)
-│
-└── src (主业务)
-    │
-    ├── api (api模块)
-    ├── assets (api模块)
-    ├── components（组件模块） 
-    ├── pages （界面）
-    ├── router (路由)
-    ├── store （vuex）
-    └── utils (工具模块)   
-
-```
-
-# 项目启动
-
-```
-// install depend
+``` bash
+# install dependencies
 npm install
-// start
+
+# serve with hot reload at localhost:8080
 npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+
+# run unit tests
+npm run unit
+
+# run e2e tests
+npm run e2e
+
+# run all tests
+npm test
 ```
 
-* 打开 [http://localhost:8080/](http://localhost:8080/)
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
