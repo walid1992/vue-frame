@@ -1,4 +1,4 @@
-# vue-frame1
+# vue-pwa
 
 > A Vue.js project
 

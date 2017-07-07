@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "postcss-px2rem": "^0.3.0"
+  }
+}

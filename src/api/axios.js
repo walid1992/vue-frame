@@ -9,7 +9,7 @@ import QS from 'querystring'
 import Call from 'api/call'
 
 // TODO baseURL
-// Axios.defaults.baseURL = 'http://172.31.243.44:3000'
+Axios.defaults.baseURL = 'https://www.shuidihuzhu.com'
 
 Axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 
